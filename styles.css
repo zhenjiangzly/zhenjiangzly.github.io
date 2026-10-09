@@ -48,6 +48,15 @@ h2 { font-family: var(--serif); font-size: 29px; font-weight: 400; letter-spacin
 .about-copy .lead { color: var(--ink); font-size: 18px; margin-bottom: 16px; }
 .about-copy p + p { margin-top: 14px; }
 .about-copy .margin-note { font-family: var(--serif); font-size: 15px; color: var(--muted); margin-top: 23px; padding-left: 16px; border-left: 2px solid #abb799; }
+.question-notes { margin-top: 32px; }
+.question-notes h3 { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+.question-notes details { border-bottom: 1px solid var(--line); }
+.question-notes summary { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; color: var(--ink); cursor: pointer; list-style: none; font-size: 13px; line-height: 1.8; }
+.question-notes summary::-webkit-details-marker { display: none; }
+.question-notes summary::after { content: "+"; font-family: var(--serif); font-size: 18px; flex-shrink: 0; }
+.question-notes details[open] summary::after { content: "−"; }
+.question-notes summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.question-notes details > p { margin: 0 0 17px; color: var(--body); font-size: 13px; line-height: 2; }
 .interests { border-top: 1px solid var(--line); padding: 58px 0 65px; }
 .section-topline { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
 .section-topline h2 { margin-top: 13px; }
@@ -61,6 +70,12 @@ h2 { font-family: var(--serif); font-size: 29px; font-weight: 400; letter-spacin
 .interest-copy > p { color: var(--body); font-size: 13px; line-height: 1.9; }
 .topic-list { display: flex; flex-wrap: wrap; gap: 16px; margin: 11px 0 0; padding: 0; list-style: none; font-size: 10px; color: var(--muted); letter-spacing: .03em; }
 .topic-list li + li::before { content: "/"; color: #a3ad97; margin-right: 16px; }
+.exploration-intro { max-width: 620px; margin: -5px 0 27px; color: var(--body); font-size: 13px; line-height: 2; }
+.project-title h3 { font-size: 19px; line-height: 1.7; }
+.project-title > span { font-family: var(--sans); font-size: 11px; }
+.project-link { display: inline-block; margin-top: 12px; font-size: 11px; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.project-link span { margin-left: 6px; }
+.project-link:hover { text-decoration-thickness: 2px; }
 .connect { padding: 49px 38px; background: var(--wash); border: 1px solid var(--line); }
 .connect-copy { align-self: center; padding-top: 4px; }
 .connect-copy > p { color: var(--body); font-size: 14px; line-height: 2; }
@@ -86,7 +101,7 @@ h2 { font-family: var(--serif); font-size: 29px; font-weight: 400; letter-spacin
   .site-header { min-height: 82px; gap: 16px; flex-wrap: wrap; padding: 18px 0; }
   .brand { font-size: 20px; gap: 10px; }
   .brand-symbol { width: 27px; height: 30px; font-size: 23px; }
-  nav { gap: 21px; font-size: 12px; }
+  nav { width: 100%; flex-wrap: wrap; gap: 0 21px; font-size: 12px; }
   .hero { grid-template-columns: 1fr; gap: 34px; padding: 53px 0 45px; }
   h1 { font-size: clamp(66px, 18vw, 100px); margin-top: 17px; margin-left: -3px; }
   .hero-statement { font-size: 26px; }
@@ -115,3 +130,4 @@ h2 { font-family: var(--serif); font-size: 29px; font-weight: 400; letter-spacin
   html { scroll-behavior: auto; }
   .github-link { transition: none; }
 }
+
